@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@media (min-width: 768px) {
+  body {
+    background-color: white !important;
+    font-family: "Poppins", sans-serif;
+  }
+  #cardContainer {
+    padding-right: 10vh;
+    padding-left: 10vh;
+  }
+  #leftSide {
+    padding-top: 9vh;
+  }
+  .trainInformation {
+    background-color: #ebebeb !important;
+  }
+  .timeNow {
+    background-color: #ed6b23 !important;
+    color: white !important;
+  }
+  .nextStation {
+    background-color: #2d2a70 !important;
+    color: white !important;
+  }
+  .station-timeline {
+    width: 100%;
+    padding: 20px;
+    background-color: transparent !important;
+    border-radius: 10px;
+  }
+  .timeline {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    posistion: relative;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    position: relative;
+  }
+  .timeline-item .circle {
+    width: 34px;
+    height: 34px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+    z-index: 1;
+  }
+  .timeline-item.active .circle {
+    background-color: #2d2a71;
+    color: white;
+  }
+  .timeline-item.current .circle {
+    background-color: #f39c12;
+  }
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    height: 15vh;
+    width: 5px;
+    background-color: #d9d9d9;
+    z-index: 0;
+  }
+  .timeline-item.active::after {
+    background-color: #2c3e50;
+  }
+  .timeline-item.current::after {
+    background-color: #d9d9d9;
+  }
+  .timeline-item:last-child::after {
+    display: none;
+  }
+  .timeline-item.no-line::after {
+    display: none;
+  }  
+  .station-name {
+    font-size: 22px;
+    color: #333;
+  }
+  .timeline-item.active .station-name,
+  .timeline-item.current .station-name {
+    font-weight: bold;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
